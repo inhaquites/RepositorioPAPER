@@ -21,6 +21,7 @@ jobs:
       run: dotnet test ${{ env.CAMINHO_PROJETO_TESTES }} --verbosity minimal
 
   build:
+    needs: [tests]
     runs-on: ubuntu-latest
 
     steps:
